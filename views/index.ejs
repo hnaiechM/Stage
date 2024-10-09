@@ -1,0 +1,28 @@
+<div class="author">
+  <h1 class="author__heading"> NOUVAMEQ</h1>
+  <p class="author__body"> De l’étude du projet à sa réalisation, Nouvameq vous accompagne tout au long des étapes de conception de data center tunisie. Avec une expérience de près de 16 ans, l’équipe Nouvameq vous propose une expertise quasiment inégalée dans le domaine de l’installation data center tunisie.</p>
+</div>
+
+<img src="/img/datacenter-tunisie-nouvameq2.png" alt="55" class="img_home" width="981" height="528">
+<section class="articles">
+  <h2 class="articles__heading">latest post</h2>
+
+
+  <ul class="article-ul">
+    <!-- boucle for -->
+
+   <% data.forEach(post => { %>
+
+    <li>
+      <a href="/post/<%= post._id %>">
+        <span><%= post.title %></span>
+        <span class="article-list__date"><%= post.createdAt %></span>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+
+  <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">view older posts</a>
+  <% } %>
+</section>
